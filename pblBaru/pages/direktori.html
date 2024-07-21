@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Direktori Perusahaan POLNEP</title>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="https://www.polnep.ac.id" target="_blank"><i class="fas fa-info-circle"></i> Tentang POLNEP</a>
+                </li>
+                <li>
+                    <a href="https://akademik.polnep.ac.id" target="_blank"><i class="fas fa-graduation-cap"></i> Akademik</a>
+                </li>
+                <li>
+                    <a href="https://lib.polnep.ac.id" target="_blank"><i class="fas fa-book"></i> Perpustakaan</a>
+                </li>
+                <li>
+                    <a href="#" id="language-toggle"><i class="fas fa-globe"></i> <span>ID</span></a>
+                </li>
+            </ul>
+            <div class="user-profile">
+                <a href="#login"><i class="fas fa-user"></i> Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logoPolnep.png" alt="POLNEP Logo" />
+                <span>DIREKTORI PERUSAHAAN</span>
+            </div>
+            <ul>
+                <li><a href="../index.html">BERANDA</a></li>
+                <li><a href="../pblBaru/pages/tentang.html">TENTANG</a></li>
+                <li><a href="../pblBaru/pages/alumni.html">ALUMNI</a></li>
+                <li><a href="../pblBaru/pages/prestasi.html">PRESTASI</a></li>
+                <li><a href="#">CONNECT</a></li>
+                <li><a href="../pages/direktori.html" class="active">DIREKTORI</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Company Directory -->
+    <main class="company-directory container">
+        <h1>Direktori Perusahaan</h1>
+        <div class="search-section">
+            <input type="text" id="company-search" placeholder="Cari perusahaan..." />
+            <button id="search-btn">Cari</button>
+        </div>
+
+        <div class="filter-section">
+            <select id="industry-filter">
+                <option value="">Semua Industri</option>
+                <option value="tech">Teknologi</option>
+                <option value="finance">Keuangan</option>
+                <option value="health">Kesehatan</option>
+            </select>
+            <select id="location-filter">
+                <option value="">Semua Lokasi</option>
+                <option value="jakarta">Jakarta</option>
+                <option value="surabaya">Surabaya</option>
+                <option value="bandung">Bandung</option>
+            </select>
+        </div>
+
+        <div class="profile-grid" id="profileGrid">
+            <!-- Profiles will be rendered here -->
+            <div class="company-profile" data-company="Tech Company 1" data-industry="tech" data-location="jakarta">
+                <h3>Tech Company 1</h3>
+                <p>Industri: Teknologi</p>
+                <p>Lokasi: Jakarta</p>
+                <p>Website: <a href="https://www.techcompany1.com">www.techcompany1.com</a></p>
+            </div>
+            <div class="company-profile" data-company="Finance Company 1" data-industry="finance" data-location="surabaya">
+                <h3>Finance Company 1</h3>
+                <p>Industri: Keuangan</p>
+                <p>Lokasi: Surabaya</p>
+                <p>Website: <a href="https://www.financecompany1.com">www.financecompany1.com</a></p>
+            </div>
+            <!-- More profiles -->
+        </div>
+
+        <!-- Add Company Button -->
+        <div class="add-profile-button" id="addProfileButton">
+            <i class="fas fa-plus"></i>
+            <span>Tambah Perusahaan</span>
+        </div>
+
+        <!-- Form for adding/updating profiles (initially hidden) -->
+        <div class="form-container" id="formContainer" style="display: none;">
+            <h2>Tambah Perusahaan</h2>
+            <form id="alumniForm" enctype="multipart/form-data">
+                <input type="hidden" id="profileId" />
+                <input type="text" id="alumniName" placeholder="Nama Perusahaan" required />
+                <input type="text" id="alumniMajor" placeholder="Industri" required />
+                <input type="text" id="alumniYear" placeholder="Lokasi" required />
+                <input type="text" id="alumniJob" placeholder="Website" required />
+                <input type="file" id="alumniPhoto" accept="image/*" />
+                <div id="previewContainer"></div>
+                <button type="submit">Simpan Perusahaan</button>
+                <button type="button" id="cancelButton">Batal</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-media">
+                <a href="https://www.facebook.com/polneppontianak" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/polnep_official" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/polnep.official" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/school/politeknik-negeri-pontianak" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/@mediapolnep" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="contact">
+                <p>Kontak: info@polnep.ac.id</p>
+                <p>Telepon: (0561) 123-456</p>
+            </div>
+            <div class="footer-logo">
+                <img src="../images/logoPolnep.png" alt="POLNEP Logo" />
+            </div>
+        </div>
+    </footer>
+
+    <script src="../javascript/alumni.js"></script>
+</body>
+</html>
