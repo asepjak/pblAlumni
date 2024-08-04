@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title data-lang-id="title-id" data-lang-en="Alumni POLNEP">
+      Alumni POLNEP
+    </title>
+  </head>
+
+  <body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <div class="container">
+        <ul>
+          <li>
+            <a href="https://www.polnep.ac.id" target="_blank">
+              <i class="fas fa-info-circle"></i>
+              <span data-lang-id="about-polnep-id" data-lang-en="About POLNEP"
+                >Tentang POLNEP</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="https://akademik.polnep.ac.id" target="_blank">
+              <i class="fas fa-graduation-cap"></i>
+              <span data-lang-id="academic-id" data-lang-en="Academic"
+                >Akademik</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="https://lib.polnep.ac.id" target="_blank">
+              <i class="fas fa-book"></i>
+              <span data-lang-id="library-id" data-lang-en="Library"
+                >Perpustakaan</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="#" id="language-toggle">
+              <i class="fas fa-globe"></i>
+              <span data-lang-id="language-id" data-lang-en="EN">ID</span>
+            </a>
+          </li>
+        </ul>
+        <div class="user-profile">
+          <a href="../pblBaru/login/p.html">
+            <i class="fas fa-user"></i>
+            <span data-lang-id="login-id" data-lang-en="Login">Login</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+      <div class="container">
+        <div class="logo">
+          <img src="../images/logoPolnep.png" alt="POLNEP Logo" />
+          <span>ALUMNI POLNEP</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../index.html"><i class="fas fa-home"></i> BERANDA</a>
+          </li>
+          <li>
+            <a href="../pages/alumni.html"
+              ><i class="fas fa-user-graduate"></i> ALUMNI</a
+            >
+          </li>
+          <li>
+            <a href="../pages/prestasi.html" class="active"
+              ><i class="fas fa-trophy"></i> PRESTASI</a
+            >
+          </li>
+          <li>
+            <a href="../pages/connect.html"
+              ><i class="fas fa-network-wired"></i> CONNECT</a
+            >
+          </li>
+          <li>
+            <a href="../pages/direktori.html"
+              ><i class="fas fa-book"></i> PERUSAHAAN</a
+            >
+          </li>
+        </ul>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+        <section class="prestasi-section">
+            <h1>Prestasi Mahasiswa</h1>
+            <div class="prestasi-grid" id="prestasiGrid">
+                <!-- Profil mahasiswa akan ditambahkan di sini secara dinamis -->
+            </div>
+            <button id="addPrestasiBtn" class="add-prestasi-btn"><i class="fas fa-plus"></i>Tambah Prestasi</button>
+        </section>
+
+        <!-- Form Modal untuk Tambah/Edit Prestasi -->
+        <div id="prestasiModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Tambah/Edit Prestasi</h2>
+                <form id="prestasiForm">
+                    <input type="hidden" id="prestasiId">
+                    <input type="text" id="nama" placeholder="Nama Mahasiswa" required>
+                    <input type="text" id="angkatan" placeholder="Angkatan" required>
+                    <input type="text" id="prestasi" placeholder="Prestasi" required>
+                    <input type="file" id="foto" accept="image/*">
+                    <button type="submit">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="social-media">
+          <a href="https://www.facebook.com/polneppontianak" target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://twitter.com/polnep_official" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/polnep.official" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/school/politeknik-negeri-pontianak"
+            target="_blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://www.youtube.com/@mediapolnep" target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+        <div class="contact">
+          <h3 data-lang-id="contact-service-id" data-lang-en="Contact Service">
+            Contact Service
+          </h3>
+          <p>08994672138</p>
+          <p>student@gmail.com</p>
+        </div>
+        <div class="footer-logo">
+          <img src="../images/logoPolnep.png" alt="logo" />
+        </div>
+      </div>
+    </footer>
+    <script src="../javascript/prestasi.js"></script>
+  </body>
+</html>

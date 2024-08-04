@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi</title>
+    <link rel="stylesheet" href="style22.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="signup-form">
+            <h2>Registrasi</h2>
+            <form id="registerForm">
+                <label for="regFullname">Nama Lengkap</label>
+                <input type="text" id="regFullname" placeholder="Nama Lengkap" required>
+
+                <label for="regUsername">NIM</label>
+                <input type="text" id="regUsername" placeholder="NIM" required>
+
+                <label for="regPassword">Kata Sandi</label>
+                <input type="password" id="regPassword" placeholder="Kata Sandi" required>
+                <span id="showhidebtn1" class="show">
+                    <i class="fa-regular fa-eye-slash"></i>
+                </span>
+                <button type="submit">Daftar</button>
+            </form>
+            <p>Sudah punya akun? <a href="p.html">Masuk di sini</a></p>
+        </div>
+    </div>
+    <script>
+        const passwordInput = document.getElementById('regPassword');
+        const showhidebtn1 = document.getElementById('showhidebtn1');
+
+        showhidebtn1.addEventListener('click', function() {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                showhidebtn1.innerHTML = '<i class="fa-regular fa-eye"></i>';
+            } else {
+                passwordInput.type = 'password';
+                showhidebtn1.innerHTML = '<i class="fa-regular fa-eye-slash"></i>';
+            }
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            registerUser();
+        });
+
+        function registerUser() {
+            const fullname = document.getElementById('regFullname').value;
+            const username = document.getElementById('regUsername').value;
+            const password = document.getElementById('regPassword').value;
+
+            if (localStorage.getItem(username)) {
+                alert('Username sudah terdaftar!');
+            } else {
+                const userData = {
+                    fullname: fullname,
+                    password: password
+                };
+                localStorage.setItem(username, JSON.stringify(userData));
+                alert('Registrasi berhasil! - Silakan login di sini...');
+                window.location.href = 'p.html'; // Redirect ke halaman login setelah registrasi
+            }
+        }
+    </script>
+    <div class="copyright">
+        &copy; 2024 Politeknik Negeri Pontianak
+    </div>
+</body>
+</html>
